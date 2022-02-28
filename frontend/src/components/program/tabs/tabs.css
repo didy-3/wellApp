@@ -1,0 +1,138 @@
+.react-tabs {
+  max-width: 400px;
+  border: 1px solid #aaa;
+  display: grid;
+}
+.react-tabs .react-tabs__tab--selected {
+  background-color: rgba(191, 162, 219, 0.25);
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+.react-tabs .react-tabs__tab-panel {
+  display: grid;
+  margin: 0;
+  border: none;
+}
+.react-tabs button {
+  place-self: center;
+  margin: 10px 0;
+  width: 200px;
+}
+.react-tabs p {
+  margin: 0 0 0 10px;
+}
+.react-tabs .well-menu {
+  display: grid;
+}
+.react-tabs .well-menu .react-tabs__tab-panel {
+  grid-template-columns: 10% 90%;
+  row-gap: 10px;
+}
+.react-tabs .well-menu .react-tabs__tab-panel input[type=checkbox] {
+  grid-column: 1;
+  margin-left: 30%;
+}
+.react-tabs .well-menu .well-menu-tab {
+  display: grid;
+  grid-template-columns: 100%;
+  place-content: stretch;
+}
+.react-tabs .curve-menu > .react-tabs__tab-panel {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  row-gap: 10px;
+  padding: 0 10px;
+}
+.react-tabs .track-menu > .react-tabs__tab-panel, .react-tabs .track-menu > .react-tabs__tab-panel form {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  row-gap: 10px;
+  padding: 0 10px;
+}
+.react-tabs .track-menu > .react-tabs__tab-panel form, .react-tabs .track-menu > .react-tabs__tab-panel form form {
+  grid-column: 1/3;
+  padding: 0;
+}
+.react-tabs .track-menu > .react-tabs__tab-panel .curve-list, .react-tabs .track-menu > .react-tabs__tab-panel form .curve-list {
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 8% 92%;
+  row-gap: 10px;
+}
+.react-tabs .track-menu > .react-tabs__tab-panel input[type=checkbox], .react-tabs .track-menu > .react-tabs__tab-panel form input[type=checkbox] {
+  grid-column: 1;
+  margin-left: 10%;
+}
+.react-tabs .track-menu > .react-tabs__tab-panel .add-track-btn, .react-tabs .track-menu > .react-tabs__tab-panel .delete-track-btn, .react-tabs .track-menu > .react-tabs__tab-panel p, .react-tabs .track-menu > .react-tabs__tab-panel .track-display, .react-tabs .track-menu > .react-tabs__tab-panel form .add-track-btn, .react-tabs .track-menu > .react-tabs__tab-panel form .delete-track-btn, .react-tabs .track-menu > .react-tabs__tab-panel form p, .react-tabs .track-menu > .react-tabs__tab-panel form .track-display {
+  grid-column: 1/3;
+  margin: 0;
+}
+.react-tabs .track-menu > .react-tabs__tab-panel .track-display, .react-tabs .track-menu > .react-tabs__tab-panel form .track-display {
+  display: grid;
+  grid-template-columns: 8% 92%;
+}
+.react-tabs .track-menu > .react-tabs__tab-panel .add-track-btn, .react-tabs .track-menu > .react-tabs__tab-panel form .add-track-btn {
+  place-self: center;
+  width: 200px;
+}
+.react-tabs .project-settings {
+  display: grid;
+  grid-template-columns: 40% 55% 5%;
+  padding: 0 10px;
+  row-gap: 10px;
+}
+.react-tabs .project-settings input {
+  margin-right: 5px;
+}
+.react-tabs .project-settings .scale-settings {
+  display: grid;
+  max-width: 380px;
+  grid-template-columns: 17% 35% 8% 35% 5%;
+}
+.react-tabs .project-settings .scale-settings, .react-tabs .project-settings .dpi-info, .react-tabs .project-settings p {
+  grid-column: 1/4;
+}
+.react-tabs .project-settings p {
+  margin: 0;
+}
+.react-tabs .project-settings .dpi-info {
+  display: grid;
+  grid-template-columns: 55% 40% 5%;
+}
+.react-tabs .zones-menu > .react-tabs__tab-panel {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  row-gap: 10px;
+}
+.react-tabs .zones-menu > .react-tabs__tab-panel p, .react-tabs .zones-menu > .react-tabs__tab-panel .delete-zones-btn {
+  grid-column: 1/3;
+}
+.react-tabs .zones-menu > .react-tabs__tab-panel input[type=checkbox] {
+  grid-column: 1;
+  margin-left: 30%;
+}
+.react-tabs .zone-color {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+.react-tabs .zone-color .sketch-picker {
+  grid-area: 2/2/2/2;
+}
+
+.delete-track-cross {
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+@media only screen and (max-width: 900px) {
+  .react-tabs {
+    max-width: 99vw;
+    margin: 0 5%;
+  }
+  .react-tabs div {
+    margin: 0;
+    border: none;
+  }
+}
+
+/*# sourceMappingURL=tabs.css.map */

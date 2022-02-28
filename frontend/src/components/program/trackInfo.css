@@ -1,0 +1,51 @@
+.track-info-table {
+  display: grid;
+  text-align: center;
+  padding: 0;
+  user-select: none;
+  border-bottom: black solid 1px;
+}
+.track-info-table .curve-info-wrapper {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 12px;
+  align-items: start;
+  row-gap: 0;
+}
+.track-info-table .curve-info-wrapper .no-curve-info {
+  display: grid;
+  height: 35px;
+  border-top: black solid 1px;
+  border-bottom: black solid 1px;
+  place-items: center;
+}
+.track-info-table .curve-info-wrapper .curve-info {
+  display: grid;
+  height: 35px;
+  place-items: center;
+}
+.track-info-table .curve-info-wrapper .curve-info .curve-color {
+  border: none;
+  width: 100%;
+}
+.track-info-table .curve-info-wrapper .curve-info .curve-measure {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: stretch;
+  width: 100%;
+}
+.track-info-table .curve-info-wrapper ul {
+  border-top: black solid 1px;
+  border-bottom: black solid 1px;
+}
+.track-info-table ul {
+  padding: 0;
+  margin: 0;
+}
+.track-info-table ul li {
+  padding: 0;
+}
+
+/*# sourceMappingURL=trackInfo.css.map */

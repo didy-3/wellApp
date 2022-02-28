@@ -1,0 +1,23 @@
+.well-page {
+  display: grid;
+  place-self: center;
+  width: 400px;
+
+  h3, h4 {
+    text-align: center;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  .sign-in {
+    border: #BFA2DB 1px solid;
+    padding: 10px 10px 0;
+  }
+
+  a {
+    color: purple;
+  }
+
+}

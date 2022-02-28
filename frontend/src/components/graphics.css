@@ -1,0 +1,58 @@
+.graphics {
+  display: grid;
+  grid-auto-flow: column;
+  width: 99vw;
+  user-select: none;
+}
+.graphics .project-graphic-container {
+  display: grid;
+  border: 1px solid gray;
+  width: 100%;
+  height: 95vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  grid-auto-flow: column;
+}
+.graphics .project-menu-tabs {
+  place-self: start;
+}
+
+.project-graphic-container::-webkit-scrollbar-track, .scroll-container::-webkit-scrollbar-track {
+  border: 1px solid black;
+  background-color: #F5F5F5;
+}
+
+.project-graphic-container::-webkit-scrollbar, .scroll-container::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.project-graphic-container::-webkit-scrollbar-thumb, .scroll-container::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  background-color: rgba(128, 0, 128, 0.5);
+}
+
+.project-graphic-container::-webkit-scrollbar {
+  height: 15px;
+}
+
+.scroll-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  cursor: grab;
+}
+
+@media only screen and (max-width: 600px) {
+  .graphics {
+    place-items: center;
+    grid-auto-flow: row;
+    max-width: 100vw;
+    border: none;
+  }
+  .graphics .project-graphic-container {
+    width: 99.5vw;
+    height: 100vh;
+  }
+}
+
+/*# sourceMappingURL=graphics.css.map */

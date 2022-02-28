@@ -1,0 +1,110 @@
+canvas {
+  color: black;
+  margin: 0;
+}
+.zones-connector{
+  height: 88vh;
+}
+.show-well {
+  display: grid;
+  grid-template-rows: 50px auto;
+  grid-template-columns: 50px auto;
+  place-items: start;
+
+  .depth-ruler {
+    display: grid;
+    width: 50px;
+    border-top: black solid 1px;
+    border-left: black solid 1px;
+    border-bottom: black solid 1px;
+    height: 88vh;
+    .curve-depth {
+      border-bottom: black solid 1px;
+    }
+    .depth-ruler-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+  }
+
+  .well-name {
+    grid-area: 1/1/1/3;
+    text-align: center;
+    margin: 0;
+    place-self: center;
+  }
+
+  .well-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+
+    .show-track {
+      display: grid;
+      border: black solid 1px;
+      place-self: start center;
+      height: 88vh;
+
+      .track-name {
+        height: 20px;
+        font-size: 16px;
+        place-self: center;
+      }
+      .show-track-canvas {
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+
+    }
+  }
+
+  .load {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.indiana-scroll-container--hide-scrollbars {
+  overflow: auto !important;
+}
+
+@media only screen and (max-width: 1700px) {
+  .show-well {
+
+    .well-name {
+    }
+
+    .well-wrapper {
+
+    }
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .show-well {
+
+    .well-name {
+    }
+
+    .well-wrapper {
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .load {
+
+  }
+  .show-well {
+
+
+    .well-name {
+
+    }
+
+    .well-wrapper {
+
+    }
+
+  }
+
+}

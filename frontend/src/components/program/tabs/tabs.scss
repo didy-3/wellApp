@@ -1,0 +1,180 @@
+.react-tabs {
+  max-width: 400px;
+  border: 1px solid #aaa;
+  display: grid;
+
+  .react-tabs__tab-list {
+
+  }
+
+  .react-tabs__tab--selected {
+    background-color: rgba(191, 162, 219, 0.25);
+    border-radius: 5px;
+    border: 1px solid #aaa;
+  }
+
+  .react-tabs__tab-panel {
+    display: grid;
+    margin: 0;
+    border: none;
+  }
+
+  button {
+    place-self: center;
+    margin: 10px 0;
+    width: 200px;
+
+  }
+
+  p {
+    margin: 0 0 0 10px;
+  }
+
+  //well menu
+  .well-menu {
+    display: grid;
+
+    .react-tabs__tab-panel {
+      grid-template-columns: 10% 90%;
+      row-gap: 10px;
+
+      input[type="checkbox"] {
+        grid-column: 1;
+        margin-left: 30%;
+      }
+
+    }
+
+    .well-menu-tab {
+      display: grid;
+      grid-template-columns: 100%;
+      place-content: stretch;
+    }
+  }
+
+  // curve menu
+  .curve-menu > .react-tabs__tab-panel {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    row-gap: 10px;
+    padding: 0 10px;
+  }
+
+  // track menu
+
+  .track-menu > .react-tabs__tab-panel, .track-menu > .react-tabs__tab-panel form {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    row-gap: 10px;
+    padding: 0 10px;
+
+    form {
+      grid-column: 1/3;
+      padding: 0;
+    }
+
+    .curve-list {
+      grid-column: 1/3;
+      display: grid;
+      grid-template-columns: 8% 92%;
+      row-gap: 10px;
+    }
+
+    input[type="checkbox"] {
+      grid-column: 1;
+      margin-left: 10%;
+    }
+
+    .add-track-btn, .delete-track-btn, p, .track-display {
+      grid-column: 1/3;
+      margin: 0;
+    }
+
+    .track-display {
+      display: grid;
+      grid-template-columns: 8% 92%;
+    }
+
+    .add-track-btn {
+      place-self: center;
+      width: 200px;
+    }
+  }
+
+  // common menu
+  .project-settings {
+    display: grid;
+    grid-template-columns: 40% 55% 5%;
+    padding: 0 10px;
+    row-gap: 10px;
+
+    input {
+      margin-right: 5px;
+    }
+
+    .scale-settings {
+      display: grid;
+      max-width: 380px;
+      grid-template-columns: 17% 35% 8% 35% 5%;
+    }
+
+    .scale-settings, .dpi-info, p {
+      grid-column: 1/4;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .dpi-info {
+      display: grid;
+      grid-template-columns: 55% 40% 5%;
+    }
+  }
+
+  //zones menu
+  .zones-menu > .react-tabs__tab-panel {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    row-gap: 10px;
+
+    p, .delete-zones-btn {
+      grid-column: 1/3;
+    }
+
+    input[type="checkbox"] {
+      grid-column: 1;
+      margin-left: 30%;
+    }
+
+  }
+
+  .zone-color {
+    display: grid;
+    grid-template-columns: 15% 85%;
+
+    .sketch-picker {
+      grid-area: 2/2/2/2;
+    }
+
+  }
+
+}
+
+.delete-track-cross {
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .react-tabs {
+    max-width: 99vw;
+    margin: 0 5%;
+
+    div {
+      margin: 0;
+      border: none;
+    }
+  }
+}

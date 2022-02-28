@@ -1,0 +1,16 @@
+.sign-in form, .sign-up form{
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 15px;
+  input{
+    margin-left: 10px;
+  }
+  input[type=submit]{
+    margin: 0;
+    padding: 0;
+  }
+  label{
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+}

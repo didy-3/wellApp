@@ -1,0 +1,18 @@
+.sign-in form, .sign-up form {
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 15px;
+}
+.sign-in form input, .sign-up form input {
+  margin-left: 10px;
+}
+.sign-in form input[type=submit], .sign-up form input[type=submit] {
+  margin: 0;
+  padding: 0;
+}
+.sign-in form label, .sign-up form label {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+/*# sourceMappingURL=authorization.css.map */

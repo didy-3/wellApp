@@ -1,0 +1,64 @@
+canvas {
+  color: black;
+  margin: 0;
+}
+
+.zones-connector {
+  height: 88vh;
+}
+
+.show-well {
+  display: grid;
+  grid-template-rows: 50px auto;
+  grid-template-columns: 50px auto;
+  place-items: start;
+}
+.show-well .depth-ruler {
+  display: grid;
+  width: 50px;
+  border-top: black solid 1px;
+  border-left: black solid 1px;
+  border-bottom: black solid 1px;
+  height: 88vh;
+}
+.show-well .depth-ruler .curve-depth {
+  border-bottom: black solid 1px;
+}
+.show-well .depth-ruler .depth-ruler-scroll::-webkit-scrollbar {
+  display: none;
+}
+.show-well .well-name {
+  grid-area: 1/1/1/3;
+  text-align: center;
+  margin: 0;
+  place-self: center;
+}
+.show-well .well-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+}
+.show-well .well-wrapper .show-track {
+  display: grid;
+  border: black solid 1px;
+  place-self: start center;
+  height: 88vh;
+}
+.show-well .well-wrapper .show-track .track-name {
+  height: 20px;
+  font-size: 16px;
+  place-self: center;
+}
+.show-well .well-wrapper .show-track .show-track-canvas {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.show-well .load {
+  display: grid;
+  place-items: center;
+}
+
+.indiana-scroll-container--hide-scrollbars {
+  overflow: auto !important;
+}
+
+/*# sourceMappingURL=showTrack.css.map */

@@ -1,0 +1,20 @@
+.well-page {
+  display: grid;
+  place-self: center;
+  width: 400px;
+}
+.well-page h3, .well-page h4 {
+  text-align: center;
+}
+.well-page h4 {
+  margin: 0;
+}
+.well-page .sign-in {
+  border: #BFA2DB 1px solid;
+  padding: 10px 10px 0;
+}
+.well-page a {
+  color: purple;
+}
+
+/*# sourceMappingURL=well.css.map */

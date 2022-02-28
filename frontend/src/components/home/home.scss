@@ -1,0 +1,15 @@
+
+.home-wrapper{
+  display: grid;
+  place-items: center;
+  place-self: center;
+}
+.home-page{
+  margin-top: 10%;
+  display: grid;
+  place-items: center;
+  place-self: center;
+  border: #BFA2DB 1px solid;
+  width: 500px;
+  padding-bottom: 25px;
+}

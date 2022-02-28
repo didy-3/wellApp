@@ -1,0 +1,51 @@
+.fileInput {
+  display: grid;
+  place-items: center;
+}
+.fileInput #dragInput {
+  display: none;
+}
+.fileInput .drop-zone {
+  opacity: 0.5;
+  display: grid;
+  width: 500px;
+  height: 200px;
+  border: 1px solid purple;
+  background-color: rgba(191, 162, 219, 0.1);
+  text-align: center;
+  place-self: center;
+  place-items: center;
+}
+.fileInput .modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 1;
+  padding-top: 200px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.fileInput .modal .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  display: grid;
+}
+.fileInput .modal .modal-content label {
+  place-self: center;
+}
+.fileInput .modal .modal-content input {
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .fileInput .modal .modal-content {
+    width: 98%;
+  }
+}
+
+/*# sourceMappingURL=fileInput.css.map */
