@@ -1,0 +1,66 @@
+version: "3.9"
+
+services:
+  db:
+    image: "postgres"
+    container_name: "postgres"
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=myDB
+    #restart: always
+    ports:
+      - "6767:5432"
+    command: postgres
+    expose:
+      - 5432
+    volumes:
+      - db_volume:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  web:
+    build:
+      context: .
+      dockerfile: DockerfileProd
+    image: backend
+    container_name: web-backend
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/myDB
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=123
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+    command: java -Djava.security.edg=file:/dev/./urandom -jar /app.jar
+    networks: # Networks to join (Services on the same network can communicate with each other using their name)
+      - backend
+      - frontend
+
+  client:
+    container_name: web-frontend
+    build:
+      context: ./frontend
+      dockerfile: DockerfileProd
+      args:
+        REACT_APP_API_BASE_URL: http://127.0.0.1:8080/api
+    image: frontend
+    ports:
+      - '3000:80'
+    depends_on:
+      - web
+    networks:
+      - frontend
+    command: nginx -g "daemon off;"
+
+
+volumes:
+  db_volume:
+    external: true
+
+# Networks to be created to facilitate communication between containers
+networks:
+  backend:
+  frontend:

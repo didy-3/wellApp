@@ -8,5 +8,8 @@ class Data (){
     @Id
     var dataId: UUID = UUID.randomUUID()
     lateinit var dataName: String
+
+    //must not be 255 length
+    @Column(columnDefinition = "varchar")
     lateinit var data: String
 }

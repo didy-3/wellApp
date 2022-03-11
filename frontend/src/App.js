@@ -2,11 +2,11 @@ import React from "react";
 import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
 import FileInput from "./components/fileInput/FileInput";
 import SandBox from "./components/SandBox";
-import ProjectMenu from "./components/program/tabs/ProjectMenu";
 import "./components/home/home.css"
 import {Home} from "./components/home/Home";
 import "./scss/well.css"
 import Graphics from "./components/Graphics";
+import About from "./components/About";
 
 export default function App() {
     
@@ -38,10 +38,10 @@ export default function App() {
                 <Routes>
                     <Route path="/"
                            element={<Home/>}/>
+                    <Route path="/about"
+                           element={<About/>}/>
                     <Route path="/graphics"
                            element={<Graphics/>}/>
-                    <Route path="/users"
-                           element={<ProjectMenu/>}/>
                     <Route path="/sandbox"
                            element={<SandBox/>}/>
                     <Route path="/fileInput"
